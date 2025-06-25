@@ -1,59 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My First Web Page</title>
+  <title>Contact Me</title>
   <style>
     body {
-      background-color: #d6dfe7;
+      background-color: #f9f9f9;
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 50px;
+      padding: 40px;
     }
-
     h1 {
-      color: #007acc;
+      color: #333;
     }
-
-    p {
-      font-size: 18px;
-      color: #333333;
+    form {
+      background: white;
+      display: inline-block;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-
-    img {
-      margin-top: 20px;
-      border: 4px solid #007acc;
-      border-radius: 10px;
+    input, textarea {
+      display: block;
+      width: 300px;
+      margin: 15px auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
     }
-
     button {
-      margin-top: 30px;
       padding: 10px 20px;
-      font-size: 16px;
       background-color: #007acc;
       color: white;
       border: none;
       border-radius: 8px;
       cursor: pointer;
     }
-
     button:hover {
-      background-color: #005f99;
+      background-color: #005b9f;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to michael stephen SIWES Page</h1>
-  <p>This is my first web page using HTML, CSS, and JavaScript.</p>
-  <img src="https://via.placeholder.com/150" alt="Placeholder image">
 
-  <br><br>
-  <button onclick="sayHello()">Click Me</button>
+  <h1>Contact Me</h1>
+
+  <form onsubmit="return validateForm()">
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="email" id="email" placeholder="Your Email">
+    <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
 
   <script>
-    function sayHello() {
-      alert("Hello from your SIWES website!");
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (!name || !email || !message) {
+        alert("Please fill in all fields.");
+        return false;
+      }
+
+      alert("Form submitted successfully!");
+      return true;
     }
   </script>
+
 </body>
 </html>
-

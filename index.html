@@ -145,12 +145,12 @@
       const email = document.getElementById("email").value.trim();
       const message = document.getElementById("message").value.trim();
 
-      if (!name || !email || !message) {
+      if (!name || email || !message) {
         alert("Please fill in all fields.");
         return false;
       }
 
-      alert("Form submitted successfully!");
+      alert("Thnak you! you input has been recieved!");
       return true;
     }
   </script>

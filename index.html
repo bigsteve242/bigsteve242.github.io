@@ -115,12 +115,18 @@
 <script>
   function validateForm() {
     const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
+    const email = document.getElementById("email           optional").value.trim(); // still collected, but optional
     const message = document.getElementById("message").value.trim();
 
-    if (!name || !email || !message) {
-      alert("Please fill in all fields.");
+    if (!name || !message) {
+      alert("Please fill in both name and message.");
       return false;
+    }
+
+    alert("Thank you! Your input has been received!");
+    return true;
+  }
+</script>
     }
 
     alert("Thank you! Your input has been received!");

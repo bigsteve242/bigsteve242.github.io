@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Stephen's Portfolio</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f8f8f8;
+      background-color: #f9f9f9;
+      margin: 0;
       padding: 40px;
       text-align: center;
     }
@@ -18,48 +20,39 @@
     }
 
     nav {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     h1 {
-      margin-bottom: 20px;
+      color: #333;
+      margin-bottom: 30px;
     }
 
-    .portfolio-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .card {
+    .project {
       background-color: white;
-      width: 280px;
-      padding: 20px;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 600px;
       text-align: left;
     }
 
-    .card img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
+    .project h2 {
+      color: #007acc;
     }
 
-    .card h3 {
-      color: #007acc;
-      margin-top: 10px;
+    .project p {
+      color: #555;
     }
 
     @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
+      body {
+        padding: 20px;
       }
 
-      .card {
-        width: 90%;
+      .project {
+        padding: 15px;
       }
     }
   </style>
@@ -76,22 +69,19 @@
 
   <h1>My Portfolio</h1>
 
-  <div class="portfolio-container">
-    <div class="card">
-      <img src="https://via.placeholder.com/250x150" alt="Project 1">
-      <h3>Project 1</h3>
-      <p>This is a responsive login form using HTML, CSS, and JavaScript.</p>
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/250x150" alt="Project 2">
-      <h3>Project 2</h3>
-      <p>A basic contact form with input validation and clean layout.</p>
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/250x150" alt="Project 3">
-      <h3>Project 3</h3>
-      <p>A mobile-friendly multi-page site using Flexbox and GitHub Pages.</p>
-    </div>
+  <div class="project">
+    <h2>Web-Based Complaint Management System</h2>
+    <p>This is my final year project. It allows students to report issues on campus facilities, track complaint status, and communicate with maintenance officers. Built with HTML, CSS, and JavaScript.</p>
+  </div>
+
+  <div class="project">
+    <h2>Responsive Login Form</h2>
+    <p>A modern login page with responsive layout and user-friendly design. Built using only HTML and CSS.</p>
+  </div>
+
+  <div class="project">
+    <h2>Contact Page Validation</h2>
+    <p>A contact form that checks user inputs before submission, improving usability. Uses JavaScript for validation logic.</p>
   </div>
 
 </body>

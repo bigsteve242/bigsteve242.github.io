@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-</head>
+<head>
   <title>WELCOME TO STEPHEN'S NRCS PROJECT PRACTICE</title>
   <style>
     :root {
@@ -50,4 +50,83 @@
       width: 100%;
       margin: 15px 0;
       padding: 10px;
-      border: 1px so
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005b9f;
+    }
+
+    /* 🔁 Mobile Responsiveness */
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      form {
+        padding: 20px;
+      }
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 15px;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="login.html">Login</a>
+  <a href="portfolio.html">Portfolio</a>
+</nav>
+
+<h1>WELCOME TO STEPHEN'S NRCS PROJECT PRACTICE</h1>
+<p>CONTACT ME</p>
+
+<form onsubmit="return validateForm()">
+  <input type="text" id="name" placeholder="Your Name">
+  <input type="email" id="email" placeholder="Your Email (optional)">
+  <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+  <button type="submit">Send</button>
+</form>
+
+<script>
+  function validateForm() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !message) {
+      alert("Please fill in all fields.");
+      return false;
+    }
+
+    alert("Thank you! Your input has been received!");
+    return true;
+  }
+</script>
+
+</body>
+</html>
